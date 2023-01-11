@@ -139,7 +139,7 @@ const Home: NextPage = () => {
               </Text>
               <Box
                 height="2px"
-                width="220px"
+                width="230px"
                 background="linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,0,0,0) 100%)"
               />
             </Flex>
