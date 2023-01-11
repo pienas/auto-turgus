@@ -229,12 +229,12 @@ const Home: NextPage = () => {
               ))}
             </Scrollbars>
             <Flex mt="12px" alignItems="center">
-              <Text letterSpacing={-1} fontSize="12px" color="white" mr="4px">
+              <Text letterSpacing={-1} fontSize="14px" color="white" mr="4px">
                 Naudokite
               </Text>
-              <ArrowUp color="#00F0FF" boxSize={5} />
-              <ArrowDown color="#00F0FF" boxSize={5} />
-              <Text letterSpacing={-1} fontSize="12px" color="white" ml="4px">
+              <ArrowUp color="#00F0FF" boxSize={6} />
+              <ArrowDown color="#00F0FF" boxSize={6} />
+              <Text letterSpacing={-1} fontSize="14px" color="white" ml="4px">
                 mygtukus, norėdami keisti peržiūrimą tr. priemonę
               </Text>
             </Flex>
@@ -358,7 +358,7 @@ const Home: NextPage = () => {
             <Link href="/nuostatai">
               <Text
                 letterSpacing={-1}
-                fontSize="12px"
+                fontSize="14px"
                 color="white"
                 textAlign="right"
                 _hover={{
