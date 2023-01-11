@@ -165,7 +165,7 @@ const Rules: NextPage = () => {
         </Heading>
         <Text color="white" mb="8px">
           5.1. Auto turgus yra visų teisių į Auto Turgus aikštelėse eksponuojamų
-          tr. priemonių ir turi išimtinę teisę į jų naudojimą.
+          tr. priemonių savininkas ir turi išimtinę teisę į jų naudojimą.
         </Text>
         <Text color="white" mb="8px">
           5.2. Bet koks trečiųjų asmenų atliekamas Auto Turgus turinio, dizaino
