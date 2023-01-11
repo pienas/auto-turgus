@@ -365,7 +365,7 @@ const Home: NextPage = () => {
                   textDecoration: "underline",
                 }}
               >
-                Taisyklės ir nuostatai
+                Taisyklės
               </Text>
             </Link>
           </Flex>
