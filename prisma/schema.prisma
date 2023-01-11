@@ -80,24 +80,28 @@ model VerificationToken {
 }
 
 enum EngineType {
+    Standard
     V8
     V10
     V12
 }
 
 enum TransmissionType {
+    Standard
     Level1
     Level2
     Level3
 }
 
 enum BrakesType {
+    Standard
     Performance
     GT
     Competition
 }
 
 enum SuspensionType {
+    Standard
     Low
     Street
     Race
