@@ -27,7 +27,7 @@ export enum TRANSMISSION {
 }
 
 export enum BRAKES {
-  Standard = "Standartiniai",
+  Standard = "Standartinė",
   Performance = "Performance",
   GT = "GT Dideli",
   Competition = "Competition",
