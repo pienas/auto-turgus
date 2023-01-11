@@ -138,7 +138,7 @@ const List: NextPage = () => {
         >
           {sessionData ? "Atsijungti" : "Prisijungti"}
         </Button>
-        {sessionData?.user?.id === "clcrkx4j8000055nk0qi3yy89" && (
+        {sessionData?.user?.id === "clcrrt2g80000mo09hvi6qxcm" && (
           <Box>
             <Heading size="md" mb="20px">
               Tr. priemonių sąrašas
