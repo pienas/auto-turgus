@@ -23,12 +23,18 @@ const Rules: NextPage = () => {
             ← Grįžti į parduodamų tr. priemonių sąrašą
           </Text>
         </Link>
-        <Heading color="white" textAlign="center">
+        <Heading color="white" textAlign="center" mb="20px">
           Taisyklės
         </Heading>
-        <Heading color="white" textAlign="center">
+        <Text color="white" textAlign="center">
+          Jau greitai
+        </Text>
+        <Heading color="white" textAlign="center" my="20px">
           Nuostatai
         </Heading>
+        <Text color="white" textAlign="center">
+          Jau greitai
+        </Text>
       </Container>
     </>
   );
