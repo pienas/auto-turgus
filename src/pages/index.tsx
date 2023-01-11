@@ -13,28 +13,28 @@ import { ArrowUp } from "../icons/ArrowUp/ArrowUp";
 import { ArrowDown } from "../icons/ArrowDown/ArrowDown";
 
 export enum ENGINE {
-  Standard = "Standartinis",
+  Standard = "Originalus",
   V8 = "V8",
   V10 = "V10",
   V12 = "V12",
 }
 
 export enum TRANSMISSION {
-  Standard = "Standartinė",
+  Standard = "Originali",
   Level1 = "1 lygio",
   Level2 = "2 lygio",
   Level3 = "3 lygio",
 }
 
 export enum BRAKES {
-  Standard = "Standartinė",
+  Standard = "Originali",
   Performance = "Performance",
   GT = "GT Dideli",
   Competition = "Competition",
 }
 
 export enum SUSPENSION {
-  Standard = "Standartinė",
+  Standard = "Originali",
   Low = "Žeminta",
   Street = "Gatvės",
   Race = "Lenktyninė",
@@ -42,7 +42,7 @@ export enum SUSPENSION {
 }
 
 export enum TYRES {
-  Standard = "Standartinės",
+  Standard = "Originalios",
   Bulletproof = "Neperšaunamos",
   Drift = "Šonaslydžio",
 }
