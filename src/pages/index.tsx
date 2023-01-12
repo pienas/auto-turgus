@@ -110,6 +110,7 @@ const Home: NextPage = () => {
         maxW="100vw"
         backgroundImage={`radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%), url(${selectedVehicle.imageUrl})`}
         backgroundRepeat="no-repeat"
+        backgroundPosition="center bottom"
         backgroundSize="cover"
         backgroundColor="rgba(0,0,0,1)"
         p="40px"
