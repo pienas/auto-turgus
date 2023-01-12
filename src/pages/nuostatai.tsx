@@ -53,9 +53,13 @@ const Rules: NextPage = () => {
           apžiūrėti eksponuojamas tr. priemones.
         </Text>
         <Text color="white" mb="8px">
-          1.3. Auto Turgus aikštelių vartotojams suteikiama galimybė eksponuoti
-          savo tr. priemones sumokėjus Auto Turgus nustatytą 2 000 (dviejų
-          tūkstančių) eurų mokestį.
+          1.3. Auto Turgus aikštelių vartotojams suteikiama galimybė palikti
+          eksponuoti savo tr. priemonę sumokėjus Auto Turgus nustatytą 2 000
+          (dviejų tūkstančių) eurų mokestį ir nustačius tr. priemonės kainą bei
+          ją pranešus Auto Turgus atstovams ar darbuotojams. Tr. priemonės
+          pardavimo atveju Auto Turgus įsipareigoja sumokėti tr. priemonės
+          savininkui jo nustatytą tr. priemonės kainą ne vėliau kaip per 1 darbo
+          dieną.
         </Text>
         <Text color="white" mb="8px">
           1.4. Auto Turgus aikštelių vartotojas sutikimą su Taisyklėmis ir
@@ -104,7 +108,7 @@ const Rules: NextPage = () => {
         <Text color="white" mb="8px">
           2.4. Auto Turgus vartotojai Auto Turgus aikštelėse eksponuojamą tr.
           priemonę gali patalpinti Auto Turgus internetinėje svetainėje už
-          papildomą Auto Turgus nustatytą 10 000 (dešimties tūkstančių) eurų
+          papildomą Auto Turgus nustatytą 20 000 (dvidešimties tūkstančių) eurų
           mokestį.
         </Text>
         <Text color="white" mb="8px">

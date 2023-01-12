@@ -11,6 +11,7 @@ import { CheckIcon } from "../icons/CheckIcon/CheckIcon";
 import { CrossIcon } from "../icons/CrossIcon/CrossIcon";
 import { ArrowUp } from "../icons/ArrowUp/ArrowUp";
 import { ArrowDown } from "../icons/ArrowDown/ArrowDown";
+import { Loading } from "../components/Loading";
 
 export enum ENGINE {
   Standard = "Originalus",
@@ -90,6 +91,8 @@ const Home: NextPage = () => {
       setSelectedVehicle(vehicles.data[selectedVehicleIndex]);
     }
   }, [selectedVehicleIndex, vehicles.data]);
+
+  if (!vehicles.data) return <Loading />;
 
   if (!selectedVehicle) return null;
 
