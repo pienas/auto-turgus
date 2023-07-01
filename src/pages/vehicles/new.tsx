@@ -9,18 +9,20 @@ import {
   Switch,
   Text,
 } from "@chakra-ui/react";
-import {
-  BrakesType,
-  EngineType,
-  SuspensionType,
-  TransmissionType,
-  TyresType,
-} from "@prisma/client";
+// import {
+//   BrakesType,
+//   EngineType,
+//   SuspensionType,
+//   TransmissionType,
+//   TyresType,
+// } from "@prisma/client";
 import type { NextPage } from "next";
 import { signIn, signOut, useSession } from "next-auth/react";
 import Head from "next/head";
 import { useState } from "react";
 import { api } from "../../utils/api";
+import { env } from "../../env/client.mjs";
+import { BRAKES, ENGINE, SUSPENSION, TRANSMISSION, TYRES } from "..";
 
 const New: NextPage = () => {
   const { data: sessionData } = useSession();
@@ -28,11 +30,16 @@ const New: NextPage = () => {
   const [name, setName] = useState<string>("");
   const [price, setPrice] = useState<string>("");
   const [imageUrl, setImageUrl] = useState<string>("");
-  const [engine, setEngine] = useState<EngineType>();
-  const [transmission, setTransmission] = useState<TransmissionType>();
-  const [brakes, setBrakes] = useState<BrakesType>();
-  const [suspension, setSuspension] = useState<SuspensionType>();
-  const [tyres, setTyres] = useState<TyresType>();
+  // const [engine, setEngine] = useState<EngineType>();
+  // const [transmission, setTransmission] = useState<TransmissionType>();
+  // const [brakes, setBrakes] = useState<BrakesType>();
+  // const [suspension, setSuspension] = useState<SuspensionType>();
+  // const [tyres, setTyres] = useState<TyresType>();
+  const [engine, setEngine] = useState<ENGINE>();
+  const [transmission, setTransmission] = useState<TRANSMISSION>();
+  const [brakes, setBrakes] = useState<BRAKES>();
+  const [suspension, setSuspension] = useState<SUSPENSION>();
+  const [tyres, setTyres] = useState<TYRES>();
   const [turbine, setTurbine] = useState<boolean>(false);
   const [airSuspension, setAirSuspension] = useState<boolean>(false);
   const [armor, setArmor] = useState<boolean>(false);
@@ -109,9 +116,7 @@ const New: NextPage = () => {
         >
           {sessionData ? "Atsijungti" : "Prisijungti"}
         </Button>
-        {(sessionData?.user?.id === "clcrrt2g80000mo09hvi6qxcm" ||
-          sessionData?.user?.id === "clcs38san0000ky08ytm8l70s" ||
-          sessionData?.user?.id === "clcsz5l7o0000l008m5k0as44") && (
+        {sessionData?.user?.id === env.NEXT_PUBLIC_ADMIN_USER_ID && (
           <Box>
             <Heading size="md" mb="20px">
               Pridėti tr. priemonę
@@ -155,9 +160,11 @@ const New: NextPage = () => {
               width="30vw"
               mb="10px"
               value={engine}
-              onChange={(e) => setEngine(e.target.value as EngineType)}
+              // onChange={(e) => setEngine(e.target.value as EngineType)}
+              onChange={(e) => setEngine(e.target.value as ENGINE)}
             >
-              {Object.values(EngineType).map((engine, i) => (
+              {/* {Object.values(EngineType).map((engine, i) => ( */}
+              {Object.values(ENGINE).map((engine, i) => (
                 <option key={i} value={engine}>
                   {engine}
                 </option>
@@ -170,10 +177,12 @@ const New: NextPage = () => {
               mb="10px"
               value={transmission}
               onChange={(e) =>
-                setTransmission(e.target.value as TransmissionType)
+                // setTransmission(e.target.value as TransmissionType)
+                setTransmission(e.target.value as TRANSMISSION)
               }
             >
-              {Object.values(TransmissionType).map((transmission, i) => (
+              {/* {Object.values(TransmissionType).map((transmission, i) => ( */}
+              {Object.values(TRANSMISSION).map((transmission, i) => (
                 <option key={i} value={transmission}>
                   {transmission}
                 </option>
@@ -185,9 +194,11 @@ const New: NextPage = () => {
               width="30vw"
               mb="10px"
               value={brakes}
-              onChange={(e) => setBrakes(e.target.value as BrakesType)}
+              // onChange={(e) => setBrakes(e.target.value as BrakesType)}
+              onChange={(e) => setBrakes(e.target.value as BRAKES)}
             >
-              {Object.values(BrakesType).map((brakes, i) => (
+              {/* {Object.values(BrakesType).map((brakes, i) => ( */}
+              {Object.values(BRAKES).map((brakes, i) => (
                 <option key={i} value={brakes}>
                   {brakes}
                 </option>
@@ -199,9 +210,11 @@ const New: NextPage = () => {
               width="30vw"
               mb="10px"
               value={suspension}
-              onChange={(e) => setSuspension(e.target.value as SuspensionType)}
+              // onChange={(e) => setSuspension(e.target.value as SuspensionType)}
+              onChange={(e) => setSuspension(e.target.value as SUSPENSION)}
             >
-              {Object.values(SuspensionType).map((suspension, i) => (
+              {/* {Object.values(SuspensionType).map((suspension, i) => ( */}
+              {Object.values(SUSPENSION).map((suspension, i) => (
                 <option key={i} value={suspension}>
                   {suspension}
                 </option>
@@ -213,9 +226,11 @@ const New: NextPage = () => {
               width="30vw"
               mb="10px"
               value={tyres}
-              onChange={(e) => setTyres(e.target.value as TyresType)}
+              // onChange={(e) => setTyres(e.target.value as TyresType)}
+              onChange={(e) => setTyres(e.target.value as TYRES)}
             >
-              {Object.values(TyresType).map((tyres, i) => (
+              {/* {Object.values(TyresType).map((tyres, i) => ( */}
+              {Object.values(TYRES).map((tyres, i) => (
                 <option key={i} value={tyres}>
                   {tyres}
                 </option>

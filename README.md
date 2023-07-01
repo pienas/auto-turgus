@@ -1,28 +1,82 @@
-# Create T3 App
+# Auto-turgus
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+My personal project for a game (GTA V) server vehicle store.
 
-## What's next? How do I make an app with this?
+## How do I deploy this?
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+Install local dependencies
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+```
+yarn
+```
+
+Ensure the `.env` file has required environment variables:
+
+```
+DATABASE_URL=file:./db.sqlite
+
+NEXTAUTH_SECRET=
+NEXTAUTH_URL=http://localhost:3000
+
+DISCORD_CLIENT_ID=
+DISCORD_CLIENT_SECRET=
+
+NEXT_PUBLIC_ADMIN_USER_ID=
+```
+
+You can see example file at `.env.example`.
+
+Seed the database with dummy data:
+
+```
+yarn db-seed
+```
+
+Run app in development mode:
+
+```
+yarn dev
+```
+
+## How do I use it?
+
+You can switch between vehicles either by pressing on vehicles card or by using up and down arrow keys on your keyboard.
+If you would like to add more vehicles you can do it using this url:
+
+```
+http://localhost:3000/vehicles/new
+```
+
+In there in the right up corner you must connect with Discord.
+After connecting with your Discord you will see a blank page with a sign out button.
+This is supposed to happen to prevent unauthorized actions.
+
+To authorize yourself to add a new vehicle you must add yourself as an admin in `.env` file.
+Easiest way to do so is to open up Prisma Studio:
+
+```
+yarn prisma studio
+```
+
+and navigate to `User` tab. In there you can copy your user id and paste it in `.env` file:
+
+```
+NEXT_PUBLIC_ADMIN_USER_ID=your user id
+```
+
+Now after refreshing the page you can add a new vehicle.
+
+After adding a new vehicle you can see it in the main page at `http://localhost:3000/`.
+
+To modify/delete any vehicle head to this url:
+
+```
+http://localhost:3000/vehicles
+```
+
+## Stack
 
 - [Next.js](https://nextjs.org)
 - [NextAuth.js](https://next-auth.js.org)
 - [Prisma](https://prisma.io)
-- [Tailwind CSS](https://tailwindcss.com)
 - [tRPC](https://trpc.io)
-
-## Learn More
-
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
-
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
-
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
-
-## How do I deploy this?
-
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.

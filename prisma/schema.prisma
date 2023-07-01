@@ -6,26 +6,23 @@ generator client {
 }
 
 datasource db {
-    provider = "postgresql"
-    // NOTE: When using postgresql, mysql or sqlserver, uncomment the @db.Text annotations in model Account below
-    // Further reading:
-    // https://next-auth.js.org/adapters/prisma#create-the-prisma-schema
-    // https://www.prisma.io/docs/reference/api-reference/prisma-schema-reference#string
+    // provider = "postgresql"
+    provider = "sqlite"
     url      = env("DATABASE_URL")
 }
 
 model Vehicle {
-    id            String           @id @default(cuid())
-    createdAt     DateTime         @default(now())
-    updatedAt     DateTime         @updatedAt
+    id            String   @id @default(cuid())
+    createdAt     DateTime @default(now())
+    updatedAt     DateTime @updatedAt
     name          String
     price         Int
     imageUrl      String
-    engine        EngineType
-    transmission  TransmissionType
-    brakes        BrakesType
-    suspension    SuspensionType
-    tyres         TyresType
+    engine        String // EngineType
+    transmission  String // TransmissionType
+    brakes        String // BrakesType
+    suspension    String // SuspensionType
+    tyres         String // TyresType
     turbine       Boolean
     airSuspension Boolean
     armor         Boolean
@@ -41,12 +38,12 @@ model Account {
     type              String
     provider          String
     providerAccountId String
-    refresh_token     String? @db.Text
-    access_token      String? @db.Text
+    refresh_token     String? // @db.Text
+    access_token      String? // @db.Text
     expires_at        Int?
     token_type        String?
     scope             String?
-    id_token          String? @db.Text
+    id_token          String? // @db.Text
     session_state     String?
     user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
 
@@ -79,37 +76,37 @@ model VerificationToken {
     @@unique([identifier, token])
 }
 
-enum EngineType {
-    Standard
-    V8
-    V10
-    V12
-}
+// enum EngineType {
+//     Standard
+//     V8
+//     V10
+//     V12
+// }
 
-enum TransmissionType {
-    Standard
-    Level1
-    Level2
-    Level3
-}
+// enum TransmissionType {
+//     Standard
+//     Level1
+//     Level2
+//     Level3
+// }
 
-enum BrakesType {
-    Standard
-    Performance
-    GT
-    Competition
-}
+// enum BrakesType {
+//     Standard
+//     Performance
+//     GT
+//     Competition
+// }
 
-enum SuspensionType {
-    Standard
-    Low
-    Street
-    Race
-    Rally
-}
+// enum SuspensionType {
+//     Standard
+//     Low
+//     Street
+//     Race
+//     Rally
+// }
 
-enum TyresType {
-    Standard
-    Bulletproof
-    Drift
-}
+// enum TyresType {
+//     Standard
+//     Bulletproof
+//     Drift
+// }

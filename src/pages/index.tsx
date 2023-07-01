@@ -276,6 +276,8 @@ const Home: NextPage = () => {
                     Variklis
                   </Text>
                   <Text letterSpacing={-1} fontSize="14px">
+                    {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+                    {/* @ts-ignore */}
                     {ENGINE[selectedVehicle.engine]}
                   </Text>
                 </Flex>
@@ -284,6 +286,8 @@ const Home: NextPage = () => {
                     Transmisija
                   </Text>
                   <Text letterSpacing={-1} fontSize="14px">
+                    {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+                    {/* @ts-ignore */}
                     {TRANSMISSION[selectedVehicle.transmission]}
                   </Text>
                 </Flex>
@@ -292,6 +296,8 @@ const Home: NextPage = () => {
                     Stabdžių sistema
                   </Text>
                   <Text letterSpacing={-1} fontSize="14px">
+                    {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+                    {/* @ts-ignore */}
                     {BRAKES[selectedVehicle.brakes]}
                   </Text>
                 </Flex>
@@ -300,6 +306,8 @@ const Home: NextPage = () => {
                     Važiuoklė
                   </Text>
                   <Text letterSpacing={-1} fontSize="14px">
+                    {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+                    {/* @ts-ignore */}
                     {SUSPENSION[selectedVehicle.suspension]}
                   </Text>
                 </Flex>
@@ -308,6 +316,8 @@ const Home: NextPage = () => {
                     Padangos
                   </Text>
                   <Text letterSpacing={-1} fontSize="14px">
+                    {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+                    {/* @ts-ignore */}
                     {TYRES[selectedVehicle.tyres]}
                   </Text>
                 </Flex>
